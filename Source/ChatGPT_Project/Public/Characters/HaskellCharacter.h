@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "BaseCharacter.h"
+#include "Characters//BaseCharacter.h"
 #include "HaskellCharacter.generated.h"
 
 UCLASS()
