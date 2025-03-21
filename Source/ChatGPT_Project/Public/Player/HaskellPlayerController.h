@@ -7,6 +7,9 @@
 #include "HaskellPlayerController.generated.h"
 
 class UInputMappingContext;
+class UInputAction;
+struct  FInputActionValue;
+
 UCLASS()
 class CHATGPT_PROJECT_API AHaskellPlayerController : public APlayerController
 {
@@ -16,7 +19,15 @@ public:
 	AHaskellPlayerController();
 protected:
 	virtual void BeginPlay() override;
+	
+	virtual void SetupInputComponent() override;
+	
 private:
 	UPROPERTY(EditAnywhere, Category="Input")
 	TObjectPtr<UInputMappingContext> HaskellContext;
+
+	UPROPERTY(EditAnywhere, Category="Input")
+	TObjectPtr<UInputAction> MoveAction;
+
+	void Move(const FInputActionValue& InputActionValue);
 };

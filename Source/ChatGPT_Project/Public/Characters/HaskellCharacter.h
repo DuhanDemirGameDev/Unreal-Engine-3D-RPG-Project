@@ -11,5 +11,6 @@ class AHaskellCharacter : public ABaseCharacter
 {
 	GENERATED_BODY()
 
-	
+public:
+	AHaskellCharacter();
 };
